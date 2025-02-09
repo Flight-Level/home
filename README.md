@@ -1,2 +1,2 @@
-# home
-Homepage for Flight Level
+# Flight Level Homepage
+Information site for Norway Live.

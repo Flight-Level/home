@@ -1,0 +1,169 @@
+/* Variables */
+
+:root{
+    --primary: #38444F;
+    --secondary: #B9D6F2;
+    --dark: #000000;
+    --light: #ffffff;
+    --danger: #E63946;
+    --success: #06D6A0;
+    --warning: #FFC43D;
+    --info: #17a2b8;
+}
+
+/* Main */
+
+
+body{
+    font-family: Roboto, sans-serif;
+    background-color: #f4f1ed;
+}
+
+.container{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.box{
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    background-color: white;
+    border-radius: 0px;
+    box-shadow: 0px 2px 4px -1px rgba(45,55,72,0.1);
+
+    font-size: 0.875rem;
+}
+
+.box img{
+    display: block;
+}
+
+footer{
+    padding: 30px;
+    margin-top: 3rem;
+    text-align: center;
+    background-color: var(--primary);
+    color: white;
+
+    text-decoration: none;
+}
+
+/* Buttons */
+
+.btn-primary{
+    color: white !important;
+    background-color: #ad6240 !important;
+    border-color: #ad6240 !important;
+}
+
+.btn-primary:hover{
+    background-color: #e78d65 !important;
+}
+
+.btn-outline-primary{
+    color: #90370f !important;
+    border-color: #ad6240 !important;
+}
+
+.btn-outline-primary:hover{
+    color: white !important;
+    background-color: #ad6240 !important;
+    border-color: #ad6240 !important;
+}
+
+/* Links */
+
+a{
+    color: #011328;
+}
+
+a:hover{
+    color: #90370f;
+}
+
+/* Headings */
+
+h1{
+    color: white;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    font-size: 5rem;
+
+    margin-top: .5rem !important;
+    margin-bottom: 0 !important;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+h2.subtitle{
+    color: white;
+}
+
+h2.small{
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+/* Custom */
+
+#hero{
+    height: 30vh;
+
+    background: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 30%;
+
+    text-align: center;
+    padding-top: 10vh;
+}
+
+.lastupdate{
+    font-size: 0.75rem;
+    color: #535a60;
+}
+
+.agenda-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.agenda{
+    width: 33.3%;
+}
+
+.agenda ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mt-3{
+    margin-top: 3rem;
+}
+
+/* Responsiveness */
+
+/* Phones and small */
+@media (max-width: 767.98px) { 
+
+    h1{
+        font-size: 3rem;
+    }
+
+}
+
+/* Old small shitphones */
+@media (max-width: 320px) { 
+    #hero{
+        height: 10vh;
+        padding-top: 3vh;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+}
