@@ -58,7 +58,7 @@ footer{
 }
 
 .btn-primary:hover{
-    background-color: #e78d65 !important;
+    background-color: #646c74 !important;
 }
 
 .btn-outline-primary{
@@ -67,7 +67,7 @@ footer{
 }
 
 .btn-outline-primary:hover{
-    color: var(--primary) !important;
+    color: var(--light) !important;
     background-color: var(--primary) !important;
     border-color: var(--primary) !important;
 }
