@@ -15,8 +15,8 @@
 
 
 body{
-    font-family: Roboto, sans-serif;
-    background-color: #f4f1ed;
+    font-family: 'Funnel Sans', sans-serif;
+    background-color: #e4e8ec;
 }
 
 .container{
@@ -27,7 +27,7 @@ body{
 .box{
     padding: 2rem;
     margin-bottom: 1.5rem;
-    background-color: white;
+    background-color: var(--light);
     border-radius: 0px;
     box-shadow: 0px 2px 4px -1px rgba(45,55,72,0.1);
 
@@ -38,12 +38,13 @@ body{
     display: block;
 }
 
+
 footer{
     padding: 30px;
     margin-top: 3rem;
     text-align: center;
     background-color: var(--primary);
-    color: white;
+    color: var(--light);
 
     text-decoration: none;
 }
@@ -51,9 +52,9 @@ footer{
 /* Buttons */
 
 .btn-primary{
-    color: white !important;
-    background-color: #ad6240 !important;
-    border-color: #ad6240 !important;
+    color: var(--light) !important;
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
 }
 
 .btn-primary:hover{
@@ -61,20 +62,20 @@ footer{
 }
 
 .btn-outline-primary{
-    color: #90370f !important;
-    border-color: #ad6240 !important;
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
 }
 
 .btn-outline-primary:hover{
-    color: white !important;
-    background-color: #ad6240 !important;
-    border-color: #ad6240 !important;
+    color: var(--primary) !important;
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
 }
 
 /* Links */
 
 a{
-    color: #011328;
+    color: var(--primary);
 }
 
 a:hover{
@@ -84,12 +85,11 @@ a:hover{
 /* Headings */
 
 h1{
-    color: white;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    color: var(--primary);
+    /*text-shadow: 0px 2px 4px rgba(255, 255, 255, 0.5);*/
     font-weight: 500;
-    font-size: 5rem;
+    font-size: 4rem;
 
-    margin-top: .5rem !important;
     margin-bottom: 0 !important;
 }
 
@@ -99,7 +99,7 @@ h2{
 }
 
 h2.subtitle{
-    color: white;
+    color: var(--light);
 }
 
 h2.small{
@@ -110,15 +110,24 @@ h2.small{
 /* Custom */
 
 #hero{
-    height: 30vh;
+    height: 35vh;
 
-    background: url(../img/bg.jpg);
+    background: url(../img/bg4.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center 30%;
+    background-position: center 33%;
 
     text-align: center;
-    padding-top: 10vh;
+    padding-top: 2rem;
+}
+
+#hero p{
+    color: var(--primary);
+    margin-top: .5rem !important;
+}
+
+#hero img{
+    max-height: 75px;
 }
 
 .lastupdate{
@@ -152,6 +161,7 @@ h2.small{
 
     h1{
         font-size: 3rem;
+        color: var(--light)
     }
 
 }
