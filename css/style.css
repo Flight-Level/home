@@ -112,7 +112,7 @@ h2.small{
 #hero{
     height: 35vh;
 
-    background: url(../img/bg4.png);
+    background: url(../img/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 33%;
@@ -161,7 +161,11 @@ h2.small{
 
     h1{
         font-size: 3rem;
-        color: var(--light)
+        padding-top: 2rem;
+    }
+
+    #hero img, #hero p{
+        display: none;
     }
 
 }
@@ -175,5 +179,6 @@ h2.small{
 
     h1{
         font-size: 1.5rem;
+        color: var(--light);
     }
 }
