@@ -34,8 +34,15 @@ body{
     font-size: 0.875rem;
 }
 
-.box img{
+.box a.sponsor-logo {
     display: block;
+}
+
+.box img{
+    max-width: 100%;      /* ensure it doesn't exceed the container width */
+    max-height: 150px;    /* cap the height at 250px */
+    width: auto;          /* auto width to preserve aspect ratio */
+    height: auto;         /* auto height to preserve aspect ratio */
 }
 
 
