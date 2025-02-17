@@ -115,6 +115,16 @@ h2.small{
     font-weight: bold;
 }
 
+h3{
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+h4{
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
 /* Custom */
 
 #hero{
