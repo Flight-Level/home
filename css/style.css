@@ -45,6 +45,10 @@ body{
     height: auto;         /* auto height to preserve aspect ratio */
 }
 
+.box img.event{
+    max-height: 250px;
+}
+
 
 footer{
     padding: 30px;
