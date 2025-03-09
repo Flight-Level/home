@@ -1,0 +1,7 @@
+---
+const { href, text, color } = Astro.props;
+---
+
+<a href={href} class={`${color} xl:flex-1 text-center p-3 rounded-sm text-lg text-center hover:brightness-[95%]`} target="_blank">
+ {text}
+</a>

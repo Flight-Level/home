@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        
+        --primary: hsl(209, 17%, 26%);
+        --secondary: hsl(209, 69%, 84%);
+        --success: hsl(164, 95%, 43%);
+        --danger: hsl(355, 78%, 56%);
+        --warning: hsl(42, 100%, 62%);
+        --info: hsl(188, 78%, 41%);
+        
+        --popover: hsl(0 0% 100%);
+        --popover-foreground: hsl(222.2 84% 4.9%);
+        
+        --muted: hsl(210 40% 96.1%);
+        --muted-foreground: hsl(215.4 16.3% 46.9%);
+        
+        --accent: hsl(180, 23%, 90%);
+        --accent-foreground: hsl(222.2 47.4% 11.2%);
+        
+        --border: hsl(214.3 31.8% 91.4%);
+        --input: hsl(214.3 31.8% 91.4%);
+        --ring: hsl(222.2 84% 4.9%);
+        
+        --radius: 2px;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+    
+    img{
+        max-width: none;
+    }
+
+    .circle{
+        display: inline;
+        width: 10px;
+        height: 10px;
+        margin-bottom: 2px;
+    }
+
+    .error-container{
+        min-height: calc(100vh - 80px - 10rem - 5rem);
+        text-align: center;
+    }
+
+    .width-main{
+        width: 100%;
+    }
+
+    .width-sidebar{
+        width: 100%;
+    }
+
+    @media(min-width: 1280px) {
+
+        .width-main{
+            width: calc(75% - 2rem);
+        }
+
+        .width-sidebar {
+            width: calc(25% - 2rem);
+        }
+    }
+
+    @keyframes slide-in {
+        0% {
+            transform: translateX(1%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+      }
+      
+    .animate-entry {
+        animation: slide-in 0.5s ease-out;
+    }
+}

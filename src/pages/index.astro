@@ -1,0 +1,114 @@
+---
+import Layout from "../layout/Layout.astro";
+import HeroButton from "../components/ui/HeroButton.astro";
+import CardBox from "../components/ui/CardBox.astro";
+import CardButton from "../components/ui/CardButton.astro";
+
+---
+
+<Layout SiteTitle="Flight Level">
+
+    <div class="relative w-full h-[500px] overflow-hidden">
+        <video
+            class="w-full h-[500px]"
+            src="/video/banner.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            style="object-fit: cover"
+        />
+        <div class="absolute inset-0 bg-primary opacity-40"></div>
+        <div class="absolute inset-0 flex items-center justify-center p-4">
+            <div class="max-w-[900px] w-full flex flex-col items-center text-center font-bold p-8">
+                <h1 class="text-white text-4xl md:text-6xl drop-shadow-xl">
+                    Join us for Norway Live 2025
+                </h1>
+                <p class="text-secondary dark:text-white text-[29.5px] p-2 text-center w-full md:w-3/5 lg:w-full drop-shadow-xl font-medium">
+                    Our yearly event for flight simulator enthusiasts in Norway!
+                </p>
+                <div class="w-[800px] mt-8 flex gap-4 justify-center">
+                    <HeroButton href="/" text="Secure your ticket" color="text-primary bg-secondary" />
+                    <HeroButton href="/" text="Learn more" color="text-primary bg-secondary" />
+                    <!--<HeroButton href="https://discord.flightlevel.no" text="Join our Discord" color="text-white bg-[#6172bd] dark:bg-[#5c6aa7]" /> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="w-[1300px] h-full flex flex-col items-center bg-[#e4e8ec]">
+        <h2 class="text-black text-2xl md:text-5xl mt-12 mb-12 font-bold">Made possible with</h2>
+        <div class="flex flex-wrap justify-center gap-8 p-4">
+            <a href="https://houseofnerds.no/" target="_blank" class="w-1/2 md:w-1/3 lg:w-1/4 flex items-center justify-center mb-4">
+                <img
+                    src="/img/sponsors/hon.png"
+                    alt="House of Nerds"
+                    class="max-w-full max-h-20 h-auto object-contain"
+                />
+            </a>
+            <a href="https://komplett.no/" target="_blank" class="w-1/2 md:w-1/3 lg:w-1/4 flex items-center justify-center mb-4">
+                <img
+                    src="/img/sponsors/komplett.svg"
+                    alt="Komplett"
+                    class="max-w-full max-h-20 h-auto object-contain"
+                />
+            </a>
+            <a href="https://flightsimulationsnorway.no/" target="_blank" class="w-1/2 md:w-1/3 lg:w-1/4 flex items-center justify-center mb-4">
+                <img
+                    src="/img/sponsors/fsn.png"
+                    alt="Flight Simulations Norway"
+                    class="max-w-full max-h-20 h-auto object-contain"
+                />
+            </a>
+            <a href="https://inibuilds.com/" target="_blank" class="w-1/2 md:w-1/3 lg:w-1/4 flex items-center justify-center mb-4">
+                <img
+                    src="/img/sponsors/iniBuilds.png"
+                    alt="iniBuilds"
+                    class="max-w-full max-h-20 h-auto object-contain"
+                />
+            </a>
+            <a href="https://norskluftambulanse.no/" target="_blank" class="w-1/2 md:w-1/3 lg:w-1/4 flex items-center justify-center mb-4">
+                <img
+                    src="/img/sponsors/nla.png"
+                    alt="Norsk Luftambulanse"
+                    class="max-w-full max-h-20 h-auto object-contain"
+                />
+            </a>
+            <a href="https://www.scandichotels.no/" target="_blank" class="w-1/2 md:w-1/3 lg:w-1/4 flex items-center justify-center mb-4">
+                <img
+                    src="/img/sponsors/scandic.png"
+                    alt="Scandic Hotels"
+                    class="max-w-full max-h-20 h-auto object-contain"
+                />
+            </a>
+            <a href="https://www.playevent.no/" target="_blank" class="w-1/2 md:w-1/3 lg:w-1/4 flex items-center justify-center mb-4">
+                <img
+                    src="/img/sponsors/playevent.png"
+                    alt="PlayEvent"
+                    class="max-w-full max-h-20 h-auto object-contain"
+                />
+            </a>
+            <a href="https://fenixsim.com/" target="_blank" class="w-1/2 md:w-1/3 lg:w-1/4 flex items-center justify-center mb-4">
+                <img
+                    src="/img/sponsors/fenix.png"
+                    alt="Fenix Simulations"
+                    class="max-w-full max-h-20 h-auto object-contain"
+                />
+            </a>
+            <a href="https://www.coca-cola.com/no/no" target="_blank" class="w-1/2 md:w-1/3 lg:w-1/4 flex items-center justify-center mb-4">
+                <img
+                    src="/img/sponsors/cola.png"
+                    alt="Coca-Cola"
+                    class="max-w-full max-h-20 h-auto object-contain"
+                />
+            </a>
+            <a href="https://mathallenoslo.no/butikk/pizzeria-vino-la-famiglia/" target="_blank" class="w-1/2 md:w-1/3 lg:w-1/4 flex items-center justify-center">
+                <img
+                    src="/img/sponsors/lafamiglia.png"
+                    alt="La Famiglia"
+                    class="max-w-full max-h-20 h-auto object-contain"
+                />
+            </a>
+        </div>
+    </main>
+</Layout>

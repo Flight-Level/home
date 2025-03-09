@@ -1,0 +1,308 @@
+---
+import React from "react";
+import PageContainer from "../../components/ui/PageContainer.astro"
+import Link from "../../components/ui/Link.astro"
+import AvailabilityDecode from "../../components/AvailabilityDecode"
+import {ExternalLinkIcon} from '../../components/icons/ExternalLinkIcon';
+import {
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
+} from "../../components/ui/Table.tsx"
+
+const Director = [{
+    POSITION: "vACC Director",
+    CID: 1384322,
+    NAME: "Daniel Dahl Andersen",
+    EMAIL: "director@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+}]
+const Training = [
+{
+    POSITION: "Training Manager Sweden",
+    CID: 937154,
+    NAME: "Håkan Schulz",
+    EMAIL: "training-sweden@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+},
+{
+    POSITION: "Training Manager Denmark",
+    CID: 1447687,
+    NAME: "Thomas Brøgger",
+    EMAIL: "training-denmark@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+},
+{
+    POSITION: "Training Manager Norway",
+    CID: 1559031,
+    NAME: "Sander Lislott",
+    EMAIL: "training-norway@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+},
+{
+    POSITION: "Training Manager Finland",
+    CID: 1339541,
+    NAME: "Otto Tuhkunen",
+    EMAIL: "training-finland@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+},
+{
+    POSITION: "Training Manager Iceland",
+    CID: 1196137,
+    NAME: "Kieran Riley",
+    EMAIL: "training-iceland@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+},
+{
+    POSITION: "Training Assistant Sweden",
+    CID: "1586141",
+    NAME: "Niklas Thell",
+    EMAIL: "training-sweden@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+},
+{
+    POSITION: "Training Assistant Denmark",
+    CID: 1336291,
+    NAME: "Jakob Ek Jensen",
+    EMAIL: "training-denmark@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+},
+{
+    POSITION: "Training Assistant Norway",
+    CID: 1621930,
+    NAME: "Marius Linge",
+    EMAIL: "training-norway@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+}
+]
+const Board = [
+    {
+    POSITION: "Training Director",
+    CID: 1602589,
+    NAME: "Jeppe Seier",
+    EMAIL: "training-director@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+},
+{
+    POSITION: "Director of Copenhagen FIR",
+    CID: 1226374,
+    NAME: "Lukas Agerskov",
+    EMAIL: "denmark@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+},
+{
+    POSITION: "Director of Polaris FIR",
+    CID: 1340812,
+    NAME: "Krister Larsen",
+    EMAIL: "norway@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+},
+{
+    POSITION: "Director of Sweden FIR",
+    CID: 811805,
+    NAME: "Martin Loxbo",
+    EMAIL: "sweden@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+},
+{
+    POSITION: "Director of Helsinki FIR",
+    CID: 0,
+    NAME: "Vacant",
+    EMAIL: "finland@vatsim-scandinavia.org",
+    AVILABILITY: "VAC",
+},
+{
+    POSITION: "Director of Reykjavík CTA",
+    CID: 1404194,
+    NAME: "Andrew Hobbs",
+    EMAIL: "iceland@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+}
+]
+const Technical = [
+{
+    POSITION: "Data Protection Officer",
+    CID: 1203470,
+    NAME: "Henrik Sønstebø",
+    EMAIL: "dpo@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+},
+{
+    POSITION: "Technical Manager",
+    CID: 1352906,
+    NAME: "Daniel Lange",
+    EMAIL: "tech@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+},
+{
+    POSITION: "Technical Assistant",
+    CID: 1512667,
+    NAME: "Thor Høgås",
+    EMAIL: "tech@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+},
+{
+    POSITION: "Technical Assistant",
+    CID: 1419105,
+    NAME: "David Mortensen",
+    EMAIL: "tech@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+},
+{
+    POSITION: "Technical Assistant",
+    CID: 1401513,
+    NAME: "Markus Nielsen",
+    EMAIL: "tech@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+},
+{
+    POSITION: "Technical Assistant",
+    CID: 1581824,
+    NAME: "Simon Bjerre",
+    EMAIL: "tech@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+}
+]
+const Event = [
+{
+    POSITION: "Event Manager",
+    CID: 1157125,
+    NAME: "Max Kuhla",
+    EMAIL: "event@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+},
+{
+    POSITION: "Event Assistant Sweden",
+    CID: 1480664,
+    NAME: "Marcus Lundelin",
+    EMAIL: "event@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+},
+{
+    POSITION: "Event Assistant Denmark",
+    CID: "1745220",
+    NAME: "Jesper Hvenegaard",
+    EMAIL: "event@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+},
+{
+    POSITION: "Event Assistant Norway",
+    CID: 1456952,
+    NAME: "Jannik Huttenlocher",
+    EMAIL: "event@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+},
+{
+    POSITION: "Event Assistant Finland",
+    CID: 1458761,
+    NAME: "Henri Luiro",
+    EMAIL: "event@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+},
+{
+    POSITION: "Event Assistant Iceland",
+    CID: 1450120,
+    NAME: "Kolbeinn Thorsteinsson",
+    EMAIL: "event@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+}
+]
+const Pilot = [
+{
+    POSITION: "Pilot Training Manager",
+    CID: 1440666,
+    NAME: "Jere Heiskanen",
+    EMAIL: "pilot-training@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+},
+{
+    POSITION: "Chief Flight Instructor",
+    CID: 1358735,
+    NAME: "Arttu Uusi-Kyyny",
+    EMAIL: "pilot-training@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+},
+{
+    POSITION: "Deputy Chief Flight Instructor",
+    CID: 1193177,
+    NAME: "Vincent Matsuuke",
+    EMAIL: "pilot-training@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+},
+{
+    POSITION: "Acting Pilot Training Manager",
+    CID: 1480445,
+    NAME: "	Tiitus Ehiarinmwian",
+    EMAIL: "pilot-training@vatsim-scandinavia.org",
+    AVILABILITY: "AVL",
+}
+]
+
+const StaffArray = [Director, Board, Training, Technical, Event, Pilot]
+---
+<PageContainer SiteTitle="Staff">
+    <h1 class="text-5xl py-12 font-semibold">Staff</h1>
+    <div class="bg-white/75 dark:bg-tertiary p-8 mb-8">
+        <p class="text-lg dark:text-white italic text-center">
+            Feedback for our ATC services, or general comments about VATSIM
+            Scandinavia can be sent
+            <Link href="https://cc.vatsim-scandinavia.org/feedback" target="_blank">here<ExternalLinkIcon width="0.75rem" marginLeft="0.3rem"/> </Link>
+        </p>
+        <div
+        class="w-full max-w-[1500px] py-6 flex-col gap-4 place-content-center  justify-items-center opacity-0 lg:opacity-100 hidden lg:flex transition"
+        >
+        <Table class:list={"bg-black dark:bg-white"}>
+            <TableHeader>
+                <TableRow>
+                    <TableHead className="font-bold text-black dark:text-white">Position</TableHead>
+                    <TableHead className="font-bold text-black dark:text-white">Name</TableHead>
+                    <TableHead className="font-bold text-black dark:text-white">CID</TableHead>
+                    <TableHead className="font-bold text-black dark:text-white">E-mail</TableHead>
+                    <TableHead className="font-bold text-black dark:text-white">Availability</TableHead>
+                </TableRow>
+            </TableHeader>
+            <TableBody>
+                {
+                    StaffArray.map((staff, index) => (
+                        <React.Fragment>
+                            {StaffArray[index].map((staff) => (
+                                <TableRow>
+                                    <TableCell>{staff.POSITION}</TableCell>
+                                    <TableCell>{staff.NAME}</TableCell>
+                                    <TableCell>{staff.CID}</TableCell>
+                                    <TableCell>{staff.EMAIL}</TableCell>
+                                    <TableCell><AvailabilityDecode Availability={staff.AVILABILITY}/></TableCell>
+                                </TableRow>
+                            ))} 
+                        </React.Fragment>
+                    ))
+                }
+            </TableBody>
+        </Table>
+        <div class="flex flex-row gap-5 justify-between text-sm mt-4 max-lg:flex-wrap">
+            <span class="max-lg:w-[100%]"><AvailabilityDecode Availability="AVL"/> = Available and can be reached on a daily basis</span>
+            <span class="max-lg:w-[100%]"><AvailabilityDecode Availability="OOO"/> = Out of Office (longer vacation, 3-6 weeks)</span>
+            <span class="max-lg:w-[100%]"><AvailabilityDecode Availability="DEP"/> = Away for more than 2 months</span>
+            <span class="max-lg:w-[100%]"><AvailabilityDecode Availability="VAC"/> = Vacant Position</span>
+        </div>
+    </div>
+    <div class="w-full grid gap-4 grid-cols-1 content-center place-items-center md:grid-cols-2 opacity-100 lg:hidden transition">
+        {
+            StaffArray.map((staff, index) => (
+                <React.Fragment>
+                    {StaffArray[index].map((staff) => (
+                        <div class="bg-tertiary dark:bg-secondary p-4 w-80 text-white rounded">
+                            <p class="font-semibold text-xl">{staff.POSITION}</p>
+                            <p>{staff.NAME}</p>
+                            <p>{staff.CID}</p>
+                            <p>{staff.EMAIL}</p>
+                        </div>
+                    ))} 
+                </React.Fragment>
+            ))
+        }
+    </div>
+</PageContainer>
