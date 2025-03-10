@@ -1,7 +1,7 @@
 ---
-const { href, text, color } = Astro.props;
+const { href, text } = Astro.props;
 ---
 
-<a href={href} class={`bg-${color} p-3 text-center text-black hover:brightness-[95%] d-block inline-block mt-2 text-sm rounded-sm`} target="_blank">
+<a href={href} class={`bg-primary p-3 text-center text-white hover:bg-[#61778b] d-block inline-block mt-2 text-sm rounded-sm`} target="_blank">
     {text}
 </a>

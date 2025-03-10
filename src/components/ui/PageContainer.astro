@@ -1,8 +1,28 @@
 ---
 import Layout from "../../layout/Layout.astro";
-const { SiteTitle } = Astro.props;
+import HeroButton from "../../components/ui/HeroButton.astro";
+const { SiteTitle, Heading, SubHeading } = Astro.props;
 ---
 <Layout SiteTitle={`${SiteTitle} | Flight Level`}>
+    <div class="relative w-full h-[350px] overflow-hidden">
+        <img
+            class="w-full h-[350px] object-cover object-[25%_40%]"
+            src="/img/bg.jpg"
+            alt=""
+        />
+        <div class="absolute inset-0 bg-primary opacity-40"></div>
+        <div class="absolute inset-0 flex items-center justify-center p-4">
+            <div class="max-w-[900px] w-full flex flex-col items-center text-center font-bold p-8">
+                <h1 class="text-white text-4xl md:text-6xl drop-shadow-xl">
+                    {Heading}
+                </h1>
+                <p class="text-secondary text-[29.5px] p-2 text-center w-full md:w-3/5 lg:w-full drop-shadow-xl font-medium">
+                    {SubHeading}
+                </p>
+            </div>
+        </div>
+    </div>
+
     <div class="max-w-[1300px] max-xl:p-4 w-full min-h-screen flex flex-col justify-start">
         <slot/>
     </div>

@@ -30,20 +30,19 @@ const events: NavigationItems = [
         external: false,
     },
     {
-        icon: TicketIcon,
-        title: "LAN-tickets",
-        href: "https://forms.gle/TYVSk4v57VhtjfoB9",
-        description: "Purchase a seat for the LAN-party",
-        external: true,
-    },
-    {
         icon: PresentationIcon,
         title: "Mini-Expo",
         href: "/norway-live-2025/expo",
         description: "Saturday presentations and stands",
         external: false,
     },
-    
+    {
+        icon: TicketIcon,
+        title: "LAN-tickets",
+        href: "https://forms.gle/TYVSk4v57VhtjfoB9",
+        description: "Purchase a seat for the LAN-party",
+        external: true,
+    },
 ]
 
 const about: NavigationItems = [
