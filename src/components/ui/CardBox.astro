@@ -12,7 +12,7 @@ const { title, padding, minHeight, link, clock } = Astro.props;
             title
         )}
     </h2>
-    <div class={`text-sm bg-white dark:bg-tertiary p-${padding} rounded-b-sm`} style={`min-height: ${minHeight}px`}>
+    <div class={`text-sm bg-white p-${padding} rounded-b-sm`} style={`min-height: ${minHeight}px`}>
         <slot />
     </div>
     {clock && (

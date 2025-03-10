@@ -8,7 +8,7 @@ To install and run this project locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/vatsim-scandinavia-website.git
+   git clone (...)
    ```
 2. Navigate to the project directory:
 

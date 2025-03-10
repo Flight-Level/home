@@ -1,6 +1,5 @@
 ---
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
-import ThemeToggle from "./ThemeToggle"
 import Navigation from "./Navigation";
 import { DiscordIcon } from "./icons/DiscordIcon";
 import { YoutubeIcon } from "./icons/YoutubeIcon";
@@ -13,7 +12,7 @@ import { FacebookIcon } from "./icons/FacebookIcon";
         <div class="w-[1300px] max-lg:w-[100%] flex flex-col lg:flex-row justify-between items-center">
             <div class="flex w-full lg:w-auto items-center justify-between">
                 <a href="/">
-                    <img width="150" src="/img/Negative.svg" alt="VATSIM Scandinavia logo">
+                    <img width="150" src="/img/Negative.svg" alt="Flight Level logo">
                 </a>
                 <div class="block lg:hidden">
                     <MenuIcon class="w-8 h-8 text-gray-200" />
@@ -22,9 +21,6 @@ import { FacebookIcon } from "./icons/FacebookIcon";
             <MenuItems class="hidden w-full px-8 lg:w-auto lg:flex lg:mt-0 text-xl max-lg:p-0 max-lg:w-[100vw]">
                 <div class="flex flex-col lg:flex-row lg:gap-3 items-center max-lg:bg-secondary max-lg:p-8">
                     <Navigation client:visible/>
-                    <div class="w-full justify-start py-4 lg:hidden max-lg:text-center">
-                        <ThemeToggle client:only/>
-                    </div>
                 </div>
             </MenuItems>
             <div class="hidden lg:block">

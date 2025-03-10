@@ -21,7 +21,7 @@ type NavigationItem = {
 }
 type NavigationItems = Array<NavigationItem>;
 
-const community: NavigationItems = [
+const events: NavigationItems = [
     {
         icon: ComputerIcon,
         title: "LAN-party",
@@ -46,69 +46,6 @@ const community: NavigationItems = [
     
 ]
 
-const gettingstarted: NavigationItems = [
-    {
-        title: "Sponsor Information",
-        href: "/sponsors",
-        description: "Read about VATSIM and possibilities",
-        external: false,
-    },
-]
-
-const components: NavigationItems = [
-    {
-        title: "Airports & Charts",
-        href: "https://wiki.vatsim-scandinavia.org/shelves/pilots",
-        description: "Our airports with charts and procedures",
-        external: true,
-    },
-    {
-        title: "Available Stands",
-        href: "https://stands.vatsim-scandinavia.org/",
-        description: "Live map for unoccupied stands",
-        external: true,
-    },
-    {
-        title: "Events",
-        href: "https://events.vatsim-scandinavia.org/",
-        description: "Overview of our upcoming events",
-        external: true,
-    },
-    {
-        title: "Event Booking",
-        href: "https://booking.vatsim-scandinavia.org/",
-        description: "Book slots for our larger events here",
-        external: true,
-    },
-]
-
-const controllers: NavigationItems = [
-    {
-        title: "Wiki",
-        href: "https://wiki.vatsim-scandinavia.org/",
-        description: "Documents and procedures",
-        external: true,
-    },
-    {
-        title: "Control Center",
-        href: "https://cc.vatsim-scandinavia.org/",
-        description: "Rosters, bookings and applications",
-        external: true,
-    },
-    {
-        title: "Training Department",
-        href: "https://wiki.vatsim-scandinavia.org/books/training-documents",
-        description: "FAQ and training-related policies",
-        external: true,
-    },
-    {
-        title: "Visiting Controllers",
-        href: "https://wiki.vatsim-scandinavia.org/books/training-documents/page/transfer-and-visiting-policy-in-vatsim-scandinavia",
-        description: "Information regarding visiting ratings",
-        external: true,
-    },
-]
-
 const about: NavigationItems = [
     {
         title: "About us",
@@ -130,7 +67,7 @@ export default function Navigation() {
                     <NavigationMenuTrigger>Norway Live 2025</NavigationMenuTrigger>
                     <NavigationMenuContent>
                         <ul className="grid w-[100%] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                            {community.map((component) => (
+                            {events.map((component) => (
                                 <ListItem
                                     key={component.title}
                                     icon={component.icon}
