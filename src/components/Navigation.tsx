@@ -12,51 +12,46 @@ import {
     NavigationMenuList,
     NavigationMenuTrigger,
 } from "./ui/Navigation-menu"
+import { ComputerIcon } from "./icons/ComputerIcon";
+import { TicketIcon } from "./icons/TicketIcon";
+import { PresentationIcon } from "./icons/PresentationIcon";
 
 type NavigationItem = {
-    title: string; href: string; description: string, external?: boolean
+    icon?: any; title: string; href: string; description: string, external?: boolean
 }
 type NavigationItems = Array<NavigationItem>;
 
 const community: NavigationItems = [
     {
-        title: "Forum",
-        href: "https://forum.vatsim-scandinavia.org",
-        description: "For longer discussions",
+        icon: ComputerIcon,
+        title: "LAN-party",
+        href: "/norway-live-2025/lan",
+        description: "Bring your rig for the whole weekend",
+        external: false,
+    },
+    {
+        icon: TicketIcon,
+        title: "LAN-tickets",
+        href: "https://forms.gle/TYVSk4v57VhtjfoB9",
+        description: "Purchase a seat for the LAN-party",
         external: true,
     },
     {
-        title: "Discord",
-        href: "http://discord.vatsim-scandinavia.org/",
-        description: "For chatting and quick questions",
-        external: true,
+        icon: PresentationIcon,
+        title: "Mini-Expo",
+        href: "/norway-live-2025/expo",
+        description: "Saturday presentations and stands",
+        external: false,
     },
+    
 ]
 
 const gettingstarted: NavigationItems = [
     {
-        title: "New to VATSIM",
-        href: "https://vatsim.net/docs/basics/getting-started",
-        description: "VATSIM 101",
-        external: true,
-    },
-    {
-        title: "Joining VATSCA",
-        href: "https://wiki.vatsim-scandinavia.org/books/getting-started-AVr/chapter/joining-vatsim-scandinavia",
-        description: "Transferring to Scandinavia",
-        external: true,
-    },
-    {
-        title: "ATC Training",
-        href: "https://cc.vatsim-scandinavia.org/",
-        description: "Apply to become a controller",
-        external: true,
-    },
-    {
-        title: "Pilot Training",
-        href: "https://wiki.vatsim-scandinavia.org/shelves/pilot-training",
-        description: "Information and applications",
-        external: true,
+        title: "Sponsor Information",
+        href: "/sponsors",
+        description: "Read about VATSIM and possibilities",
+        external: false,
     },
 ]
 
@@ -116,25 +111,14 @@ const controllers: NavigationItems = [
 
 const about: NavigationItems = [
     {
-        title: "Staff",
-        href: "/about/staff",
-        description: "Roles and contact information",
+        title: "About us",
+        href: "/about",
+        description: "Read more about the organization",
     },
     {
         title: "Contact Us",
-        href: "/about/contact",
+        href: "/contact",
         description: "Get in touch with us",
-    },
-    {
-        title: "Constitution & Policies",
-        href: "https://wiki.vatsim-scandinavia.org/shelves/vacc-documents",
-        description: "Privacy, graphical profile & more",
-        external: true,
-    },
-    {
-        title: "Donations",
-        href: "/about/donations",
-        description: "Help us keep VATSCA running!",
     },
 ]
 
@@ -145,10 +129,11 @@ export default function Navigation() {
                 <NavigationMenuItem>
                     <NavigationMenuTrigger>Norway Live 2025</NavigationMenuTrigger>
                     <NavigationMenuContent>
-                        <ul className="grid gap-3 p-6 w-[100%] md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                        <ul className="grid w-[100%] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                             {community.map((component) => (
                                 <ListItem
                                     key={component.title}
+                                    icon={component.icon}
                                     title={component.title}
                                     href={component.href}
                                     external={component.external}
@@ -160,21 +145,14 @@ export default function Navigation() {
                     </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <NavigationMenuTrigger>Sponsors</NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                        <ul className="grid w-[100%] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                            {gettingstarted.map((component) => (
-                                <ListItem
-                                    key={component.title}
-                                    title={component.title}
-                                    href={component.href}
-                                    external={component.external}
-                                >
-                                    {component.description}
-                                </ListItem>
-                            ))}
-                        </ul>
-                    </NavigationMenuContent>
+                    <NavigationMenuLink asChild>
+                        <a
+                            href="/sponsors"
+                            className="block px-4 py-2 text-base font-medium transition-colors rounded-md hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        >
+                            Sponsors
+                        </a>
+                    </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <NavigationMenuTrigger>About Us</NavigationMenuTrigger>
@@ -183,6 +161,7 @@ export default function Navigation() {
                             {about.map((component) => (
                                 <ListItem
                                     key={component.title}
+                                    icon={component.icon}
                                     title={component.title}
                                     href={component.href}
                                     external={component.external}
@@ -199,12 +178,13 @@ export default function Navigation() {
 }
 
 interface NavigationListItemProps extends React.ComponentPropsWithoutRef<"a"> {
+    icon?: any,
     title: string;
     external?: boolean;
 }
 
 const ListItem = React.forwardRef<HTMLAnchorElement, NavigationListItemProps>(
-    ({ className, title, children, external, ...props }, ref) => {
+    ({ className, icon, title, children, external, ...props }, ref) => {
         return (
             <li>
                 <NavigationMenuLink asChild>
@@ -217,6 +197,7 @@ const ListItem = React.forwardRef<HTMLAnchorElement, NavigationListItemProps>(
                         )}
                         {...props}
                     >
+                        {icon && icon({ width: "1.5rem", marginLeft: 0 })}
                         <div className="text-sm font-medium leading-none">
                             {title}
                             {external == true && <ExternalLinkIcon width="0.75rem" marginLeft="0.3rem" />}
