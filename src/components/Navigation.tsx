@@ -83,10 +83,10 @@ export default function Navigation() {
                 <NavigationMenuItem>
                     <NavigationMenuLink asChild>
                         <a
-                            href="/sponsors"
+                            href="/sponsor"
                             className="block px-4 py-2 text-base font-medium transition-colors rounded-md hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         >
-                            Sponsors
+                            Sponsoring
                         </a>
                     </NavigationMenuLink>
                 </NavigationMenuItem>
