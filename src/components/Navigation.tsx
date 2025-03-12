@@ -45,19 +45,6 @@ const events: NavigationItems = [
     },
 ]
 
-const about: NavigationItems = [
-    {
-        title: "About us",
-        href: "/about",
-        description: "Read more about the organization",
-    },
-    {
-        title: "Contact Us",
-        href: "/contact",
-        description: "Get in touch with us",
-    },
-]
-
 export default function Navigation() {
     return (
         <NavigationMenu >
@@ -91,22 +78,24 @@ export default function Navigation() {
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <NavigationMenuTrigger>About Us</NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                        <ul className="grid w-[100%] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                            {about.map((component) => (
-                                <ListItem
-                                    key={component.title}
-                                    icon={component.icon}
-                                    title={component.title}
-                                    href={component.href}
-                                    external={component.external}
-                                >
-                                    {component.description}
-                                </ListItem>
-                            ))}
-                        </ul>
-                    </NavigationMenuContent>
+                    <NavigationMenuLink asChild>
+                        <a
+                            href="/about"
+                            className="block px-4 py-2 text-base font-medium transition-colors rounded-md hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        >
+                            About us
+                        </a>
+                    </NavigationMenuLink>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                    <NavigationMenuLink asChild>
+                        <a
+                            href="mailto:hei@flightlevel.no"
+                            className="block px-4 py-2 text-base font-medium transition-colors rounded-md hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        >
+                            Contact us
+                        </a>
+                    </NavigationMenuLink>
                 </NavigationMenuItem>
             </NavigationMenuList>
         </NavigationMenu>
