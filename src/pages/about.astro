@@ -1,0 +1,57 @@
+---
+import CardButton from "../components/ui/CardButton.astro"
+import CardBox from "../components/ui/CardBox.astro"
+import Link from "../components/ui/Link.astro"
+import CardSponsors from "../components/ui/CardSponsors.astro"
+import PageContainer from "../components/ui/PageContainer.astro"
+import Sponsors from "../components/ui/Sponsors.astro";
+---
+
+<PageContainer SiteTitle="About Us" Heading="About Us" SubHeading="">
+
+    <div class="w-full h-fit flex justify-center" id="bookings">
+        <div class="max-w-[1300px] w-full content-center pt-6 pb-6">
+            <div class="flex max-xl:flex-wrap gap-8 max-sm:px-0 max-xl:px-8">
+                <div class="width-main flex flex-col gap-8">
+                    <CardBox title="About Flight Level">
+                        <p class="text-base mb-4">
+                            We're a non-profit organization for flight simulator enthusiasts and virtual air traffic controllers. We strive to arrange a meeting place to share and practice their hobby.
+                        </p>
+
+                        <p class="text-base">Membership fee for 2025 is set to 100 NOK. <Link href="/files/Vedtekter.pdf" target="_blank">Read our statutes</Link>.</p>
+
+                        <h3 class="mt-8 mb-2 font-bold">Our main activities</h3>
+                        <ul class="list-disc pl-5 space-y-1 mb-4">
+                            <li>Arrange a meeting place to share and practice their hobby</li>
+                            <li>Inspire outsiders to start with flight simulators and virtual air traffic controllers</li>
+                            <li>Increase understanding and knowledge among parents about children's interest in flying, gaming and online togetherness</li>
+                        </ul>
+
+                        <h3 class="mt-8 mb-2 font-bold">The Board</h3>
+                        <ul class="list-disc pl-5 space-y-1 mb-4">
+                            <li>Chairman: Daniel Lange</li>
+                            <li>Deputy Chairman: Lasse Ljung</li>
+                        </ul>
+
+                        <h3 class="mt-8 mb-2 font-bold">Formally known as</h3>
+                        <p class="mb-4">
+                            Flight Level Norge<br>
+                            Organization Number: 935 068 487<br>
+                            Norwegian-registered non-profit organization
+                        </p>
+
+                        <CardButton href="mailto:sponsor@flightlevel.no" text="Contact us" />
+
+                    </CardBox>
+                </div>
+                    
+                <div class="flex-grow flex flex-col gap-8 width-sidebar">
+                    <div class="w-full bg-white p-8 text-sm">
+                        <img src="/img/Square%20Positive.svg" alt="Flight Level logo" class="w-full" />
+                        <p>Our logo symbolises the altitude clamp seen in digital flight altimeter displays. Hence the reference to Flight Level.</p>
+                    </div>
+                </div>
+            </div>                    
+        </div>
+    </div>
+</PageContainer>

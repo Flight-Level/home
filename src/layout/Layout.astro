@@ -1,0 +1,52 @@
+---
+const { SiteTitle } = Astro.props;
+import Footer from "../components/Footer.astro"
+import { ClientRouter } from "astro:transitions";
+import { Tooltips } from 'astro-tooltips';
+import Nav from "../components/Navbar.astro"
+import '../globals.css'
+---
+
+<html lang="en">
+<head>
+    <title>{SiteTitle}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="Flight Level">
+    <meta property="og:description" content="Our yearly event for flight simulator enthusiasts in Norway!">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://flightlevel.no/img/bg.jpg">
+    <meta property="og:image:type" content="image/jpg">
+    <meta property="og:site_name" content="Flight Level">
+    <meta property="og:locale" content="en_GB">
+
+    <meta name="author" content="Flight Level">
+    <meta name="keywords" content="Flight Level, Flight, Level, Norway, Norge, Flight Simulator, VATSIM, ATC, Pilot, Norway Live">
+    <meta name="theme-color" content="#38444F">
+
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <script defer src="https://umami.blt950.com/script.js" data-website-id="57288f26-ab1e-48de-a577-315f89ccf94f" data-domains="flightlevel.no"></script>
+
+    <Tooltips interactive={false} delay={[15, 140]} />
+    <ClientRouter />
+</head>
+<body class="bg-[#e4e8ec] w-full h-full min-h-screen text-black transition ease-in-out delay-50 flex flex-col items-center">
+    <Nav />
+    <slot />
+    <Footer />
+</body>
+</html>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Funnel Sans', sans-serif;
+        font-optical-sizing: auto;
+    }
+</style>
