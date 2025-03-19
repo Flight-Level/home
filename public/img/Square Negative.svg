@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Square" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #38444f;
+      }
+    </style>
+  </defs>
+  <rect class="cls-2" y="-.5" width="400" height="400"/>
+  <polygon id="Clamp" class="cls-1" points="275 350 125 350 125 50 275 50 275 155 184.25 200 275 245 275 350"/>
+</svg>
