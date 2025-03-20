@@ -35,6 +35,14 @@
     h3{
         font-size: 1rem;
     }
+
+    summary {
+        cursor: pointer;
+    }
+
+    summary:hover{
+        background-color: var(--muted);
+    }
 }
 
 @layer base {

@@ -1,0 +1,159 @@
+---
+import CardButton from "../../components/ui/CardButton.astro"
+import CardBox from "../../components/ui/CardBox.astro"
+import Link from "../../components/ui/Link.astro"
+import CardSponsors from "../../components/ui/CardSponsors.astro"
+import PageContainer from "../../components/ui/PageContainer.astro"
+---
+
+<PageContainer SiteTitle="Presentations" Heading="Presentations" SubHeading="Norway Live 2025">
+
+    <div class="w-full h-fit flex justify-center" id="bookings">
+        <div class="max-w-[1300px] w-full content-center pt-6 pb-6">
+            <div class="flex max-xl:flex-wrap gap-8 max-sm:px-0 max-xl:px-8">
+                <div class="width-main flex flex-col gap-8">
+                    <CardBox title="Presentations">
+                        <p class="text-base">
+                            🎤 Come by to hear some talks and to participate in our contest with giveaways!<br>
+                            📍 House of Nerds, <Link href="https://maps.app.goo.gl/CjrVuYnguQuNfygz9" target="_blank">Vulkan 18, 0178 Oslo</Link><br>
+                            🗓️ Saturday 26th April 2025<br>
+                            🕑 15:00-18:00
+                        </p>
+                    </CardBox>
+                        
+                    <CardBox title="Agenda">
+
+                        <p class="mb-8">The presentations are mainly in Norwegian.</p>
+
+                        <div class="flex flex-col gap-8" lang="no">
+                            <div class="flex flex-col md:flex-row items-start gap-4">
+                                <img src="/img/2025/presenters/daniel.jpg" alt="Daniel Lange" class="w-[6rem] h-[6rem] rounded-full object-cover" />
+                                <div>
+                                    <h3 class="text-lg text-info font-bold">15:00 - 15:30</h3>
+                                    <h4 class="text-xl font-bold">Hva er VATSIM?</h4>
+                                    <p class="text-sm text-gray-600">Daniel Lange, styreleder Flight Level Norge og arrangør</p>
+                                    <details class="w-full md:w-[600px]">
+                                        <summary class="text-sm text-gray-600">Les mer</summary>
+                                        Daniel er en mangeårig flysimulatorentusiast og har vært med å bygge opp VATSIM Scandinavia nettverket og er aktiv som både virtuell pilot og flygleder. Han er også styreleder i Flight Level Norge og har vært med å arrangere Norway Live siden 2023.
+                                    </details>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row items-start gap-4">
+                                <img src="/img/2025/presenters/hrafnhildur.jpg" alt="Hrafnhildur Jónasdóttir" class="w-[6rem] h-[6rem] rounded-full object-cover" />
+                                <div>
+                                    <h3 class="text-lg text-info font-bold">15:30 - 16:00</h3>
+                                    <h4 class="text-xl font-bold">Jenter innen gaming</h4>
+                                    <p class="text-sm text-gray-600">Hrafnhildur Jónasdóttir, spillforsker</p>
+                                    <details class="w-full md:w-[600px]">
+                                        <summary class="text-sm text-gray-600">Les mer</summary>
+                                        Hrafnhildur er en spillforsker med en Ph.D. i digital innovasjon innen spillindustrien, og har omfattende erfaring som spilltester, foreleser og veileder for utviklere. Med en lidenskap for hvordan spill kan brukes til læring, sosialt samspill og personlig vekst, deler hun sin ekspertise gjennom forskning, foredrag og streaming.
+                                    </details>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row items-start gap-4">
+                                <img src="/img/2025/presenters/harald.jpg" alt="Harald Jøsendal" class="w-[6rem] h-[6rem] rounded-full object-cover" style="object-position: top left;" />
+                                <div>
+                                    <h3 class="text-lg text-info font-bold">16:00 - 16:30</h3>
+                                    <h4 class="text-xl font-bold">eVTOL - nå og fremtiden</h4>
+                                    <p class="text-sm text-gray-600">Harald B. Jøsendal, Prosjektleder eVTOL, Stiftelsen Norsk Luftambulanse</p>
+                                    <details class="w-full md:w-[600px]">
+                                        <summary class="text-sm text-gray-600">Les mer</summary>
+                                        Harald er prosjektleder for Airbus og Stiftelsen Norsk Luftambulanse sitt eVTOL prosjekt. De ser på hvordan City Airbus Next Generation eVTOL kan brukes i det norske helsevesenet og innenfor luftambulansesystemet i Norge.
+                                        Harald er utdannet sivilingeniør fra KTH i Stockholm og har tidligere erfaring fra Luftforsvaret. Akkurat nå på Norway Live og VATSIM er Harald mest opptatt av flyturer med eVTOL ut fra Sandnessjøen.
+                                    </details>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row items-start gap-4">
+                                <img src="/img/2025/presenters/finn.jpg" alt="Finn Hansen" class="w-[6rem] h-[6rem] rounded-full object-cover" />
+                                <div>
+                                    <h3 class="text-lg text-info font-bold">16:30 - 17:00</h3>
+                                    <h4 class="text-xl font-bold">Hvordan jobber jeg med å lage sceneries?</h4>
+                                    <p class="text-sm text-gray-600">Finn Hansen, scenery developer for Orbx</p>
+                                    <details class="w-full md:w-[600px]">
+                                        <summary class="text-sm text-gray-600">Les mer</summary>
+                                        Finn er kjent for sine norske sceneries han har laget til flysimulatorer for Orbx de ti siste årene. Det er blant annet Oslo Lufthavn Gardermoen, Ålesund og Molde.
+                                    </details>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row items-start gap-4">
+                                <img src="/img/2025/presenters/qa.jpg" alt="" class="w-[6rem] h-[6rem] rounded-full object-cover" />
+                                <div>
+                                    <h3 class="text-lg text-info font-bold">17:00 - 17:15</h3>
+                                    <h4 class="text-xl font-bold">Q&amp;A med scenery developers</h4>
+                                    <p class="text-sm text-gray-600">Finn Hansen (Orbx) &amp; Jo Erlend Sund (Aerosoft), scenery developers</p>
+                                    <details class="w-full md:w-[600px]">
+                                        <summary class="text-sm text-gray-600">Les mer</summary>
+                                        Vi inviterer både Finn og Jo Erlend på scenen for å svare på spørsmål fra publikum om hvordan de jobber med å lage sceneries til flysimulatorer.
+                                    </details>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row items-start gap-4">
+                                <img src="/img/2025/presenters/michael.jpg" alt="Michael Hildebrandt" class="w-[6rem] h-[6rem] rounded-full object-cover" />
+                                <div lang="en">
+                                    <h3 class="text-lg text-info font-bold">17:15 - 17:45</h3>
+                                    <h4 class="text-xl font-bold">Human Factors and Serious Gaming: The VATSIM Community (English talk)</h4>
+                                    <p class="text-sm text-gray-600">Michael Hildebrandt, Senior Researcher, Institute for Energy Technology</p>
+                                    <details class="w-full md:w-[600px]">
+                                        <summary class="text-sm text-gray-600">Les mer</summary>
+                                        Michael is a Human Factors psychologist at the Institute for Energy Technology in Halden where he leads the Biometrics Lab. The lab works on user monitoring technology for transport and process control applications.
+                                    </details>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row items-start gap-4">
+                                <img src="/img/Square%20Negative.svg" alt="Giveaways" class="w-[6rem] h-[6rem] rounded-full object-cover" />
+                                <div>
+                                    <h3 class="text-lg text-info font-bold">17:45 - 18:00</h3>
+                                    <h4 class="text-xl font-bold">Vinnere av rebus annonseres</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </CardBox>
+
+                    <CardBox title="Contest Prizes">
+
+                        <p class="mb-8">The prizes will be a part of contest happening on saturday. Look for the participation sheets in the bar.</p>
+
+                        <div class="flex flex-col gap-8">
+                            <div class="flex flex-col md:flex-row items-start gap-4">
+                                <img src="/img/2025/prizes/1.jpg" alt="Picture of a Boeing 737 cockpit" class="w-[8rem] h-[8rem] object-cover" />
+                                <div>
+                                    <h3 class="text-xl font-bold">1st place: Boeing 737 Simulator</h3>
+                                    <p class="text-sm">One hour for one person in a Boeing 737 Simulator at Dal (1500 NOK of value)</p>
+                                    <div class="mt-4">
+                                        <p class="text-sm text-gray-600 mb-2">Sponsored by</p>
+                                        <img src="/img/sponsors/fsn.png" alt="Flight Simulations Norway" class="h-6" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row items-start gap-4">
+                                <img src="/img/2025/prizes/2.jpg" alt="Picture of a Hyper X wireless gaming headset" class="w-[8rem] h-[8rem] object-cover" />
+                                <div>
+                                    <h3 class="text-xl font-bold">2nd place: HyperX Cloud Alpha Gaming Headset</h3>
+                                    <p class="text-sm">Wireless HyperX gaming headset in red/black color (999 NOK of value)</p>
+                                    <div class="mt-4">
+                                        <p class="text-sm text-gray-600 mb-2">Sponsored by</p>
+                                        <img src="/img/sponsors/komplett.svg" alt="Komplett" class="h-6" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </CardBox>
+
+                    <CardSponsors />
+                </div>
+                    
+                <div class="flex-grow flex flex-col gap-8 width-sidebar">
+                    <CardBox title="Entrance">
+                        <p><b>The presentations is free of charge.</b> If you're able, please purchase something in the bar to support House of Nerds.</p>
+                    </CardBox>
+
+                    <CardBox title="LAN Party">
+                        <p class="mb-4">Do you want to bring your computer and join us for a weekend long LAN Party at the venue as well?</p>
+
+                        <CardButton href="/norway-live-2025/lan" text="Read More" />
+                    </CardBox>
+                </div>
+            </div>                    
+        </div>
+    </div>
+</PageContainer>

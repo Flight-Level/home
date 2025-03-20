@@ -24,23 +24,23 @@ type NavigationItems = Array<NavigationItem>;
 const events: NavigationItems = [
     {
         icon: ComputerIcon,
-        title: "LAN-party",
+        title: "LAN Party",
         href: "/norway-live-2025/lan",
         description: "Bring your rig for the whole weekend",
         external: false,
     },
     {
         icon: PresentationIcon,
-        title: "Mini-Expo",
-        href: "/norway-live-2025/expo",
-        description: "Saturday presentations and stands",
+        title: "Presentations",
+        href: "/norway-live-2025/presentations",
+        description: "Free saturday presentations",
         external: false,
     },
     {
         icon: TicketIcon,
-        title: "LAN-tickets",
+        title: "LAN Tickets",
         href: "https://forms.gle/TYVSk4v57VhtjfoB9",
-        description: "Purchase a seat for the LAN-party",
+        description: "Purchase a seat for the LAN Party",
         external: true,
     },
 ]
