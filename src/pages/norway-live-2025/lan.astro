@@ -46,9 +46,8 @@ import PageContainer from "../../components/ui/PageContainer.astro"
                     
                 <div class="flex-grow flex flex-col gap-8 width-sidebar">
                     <CardBox title="Documents">
-                        <Link class="btn btn-outline-primary btn-sm mt-2" target="_blank" href="/files/Terms%20and%20Regulations.pdf">Terms and Regulations</Link>
-                        <br>
-                        <Link class="btn btn-outline-primary btn-sm mt-2" target="_blank" href="/files/Guardian%20Consent%20Form.pdf">Guardian Consent Form</Link>
+                        <CardButton external="true" secondary="true" href="/files/Terms%20and%20Regulations.pdf">📎 Terms and Regulations</CardButton>
+                        <CardButton external="true" secondary="true" href="/files/Guardian%20Consent%20Form.pdf">📎 Guardian Consent Form</CardButton>
                     </CardBox>
 
                     <CardBox title="LAN Tickets">
@@ -64,13 +63,13 @@ import PageContainer from "../../components/ui/PageContainer.astro"
                             Available within 11th of April 2025
                         </p>
 
-                        <CardButton href="https://forms.gle/TYVSk4v57VhtjfoB9" text="Buy tickets" />
+                        <CardButton href="https://forms.gle/TYVSk4v57VhtjfoB9">Buy tickets</CardBox>
                     </CardBox>
 
                     <CardBox title="Presentations">
                         <p class="mb-4">Are you just passing by to say hello? Check our our presentations on Saturday with free entrance!</p>
 
-                        <CardButton href="/norway-live-2025/presentations" text="Read More" />
+                        <CardButton href="/norway-live-2025/presentations">Read More</CardButton>
                     </CardBox>
                 </div>
             </div>                    
