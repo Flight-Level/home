@@ -15,6 +15,7 @@ import {
 import { ComputerIcon } from "./icons/ComputerIcon";
 import { TicketIcon } from "./icons/TicketIcon";
 import { PresentationIcon } from "./icons/PresentationIcon";
+import { AirplaneIcon } from "./icons/AirplaneIcon";
 
 type NavigationItem = {
     icon?: any; title: string; href: string; description: string, external?: boolean
@@ -43,6 +44,13 @@ const events: NavigationItems = [
         description: "Purchase a seat for the LAN Party",
         external: true,
     },
+    {
+        icon: AirplaneIcon,
+        title: "Pilot Information",
+        href: "/norway-live-2025/pilots",
+        description: "VATSIM Pilot Information",
+        external: false,
+    }
 ]
 
 export default function Navigation() {
