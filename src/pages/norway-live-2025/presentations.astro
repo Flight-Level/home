@@ -24,8 +24,29 @@ import PageContainer from "../../components/ui/PageContainer.astro"
                     </CardBox>
                         
                     <CardBox title="Agenda">
+                        <h3 class="mb-4 font-bold">Activities</h3>
 
-                        <p class="mb-8">The presentations are mainly in Norwegian.</p>
+                        <div class="flex flex-col gap-8">
+                            <div class="flex flex-col md:flex-row items-start gap-4">
+                                <img src="/img/Square%20Negative.svg" alt="" class="w-[6rem] h-[6rem] rounded-full object-cover" />
+                                <div>
+                                    <h3 class="text-lg text-info font-bold">12:00 - 17:00</h3>
+                                    <h4 class="text-xl font-bold">Contest</h4>
+                                    <p class="text-sm text-gray-600">Starts in the bar. See prizes below.</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row items-start gap-4">
+                                <img src="/img/2025/presenters/avinor.png" alt="Avinor" class="w-[6rem] h-[6rem] rounded-full object-cover" />
+                                <div>
+                                    <h3 class="text-lg text-info font-bold">14:00 - 16:00</h3>
+                                    <h4 class="text-xl font-bold">Stand: Avinor Flysikring</h4>
+                                    <p class="text-sm text-gray-600">Ask them about air traffic controlling and career possibilities.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="mt-8 font-bold">Presentations</h3>
+                        <p class="mt-1 mb-8">The presentations are mainly in Norwegian.</p>
 
                         <div class="flex flex-col gap-8" lang="no">
                             <div class="flex flex-col md:flex-row items-start gap-4">
