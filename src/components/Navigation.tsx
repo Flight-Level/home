@@ -17,6 +17,12 @@ import { TicketIcon } from "./icons/TicketIcon";
 import { PresentationIcon } from "./icons/PresentationIcon";
 import { AirplaneIcon } from "./icons/AirplaneIcon";
 
+import { DiscordIcon } from "./icons/DiscordIcon";
+import { YoutubeIcon } from "./icons/YoutubeIcon";
+import { TwitchIcon } from "./icons/TwitchIcon";
+import { FacebookIcon } from "./icons/FacebookIcon";
+import { InstagramIcon } from "./icons/InstagramIcon";
+
 type NavigationItem = {
     icon?: any; title: string; href: string; description: string, external?: boolean
 }
@@ -104,6 +110,28 @@ export default function Navigation() {
                             Contact us
                         </a>
                     </NavigationMenuLink>
+                </NavigationMenuItem>
+                <NavigationMenuItem className="lg:hidden">
+                    <NavigationMenuTrigger>Social Media</NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                        <ul className="flex items-center gap-4 p-4">                           
+                            <a href="https://discord.flightlevel.no" target="_blank" className="hover:text-accent" aria-label="Discord">
+                                <DiscordIcon width="2rem" />
+                            </a>
+                            <a href="https://www.youtube.com/@flightlevelnorge" target="_blank" className="hover:text-accent" aria-label="Youtube">
+                                <YoutubeIcon width="2rem" marginLeft="0.5rem" />
+                            </a>
+                            <a href="https://www.twitch.tv/flightlevelnorge" target="_blank" className="hover:text-accent" aria-label="Twitch">
+                                <TwitchIcon width="1.5rem" marginLeft="0.5rem" />
+                            </a>
+                            <a href="https://www.facebook.com/flightlevelnorge" target="_blank" className="hover:text-accent" aria-label="Facebook">
+                                <FacebookIcon width="1.5rem" marginLeft="0.5rem" />
+                            </a>
+                            <a href="https://www.instagram.com/flightlevelnorge/" target="_blank" className="hover:text-accent" aria-label="Instagram">
+                                <InstagramIcon width="1.45rem" marginLeft="0.5rem" />
+                            </a>
+                        </ul>
+                    </NavigationMenuContent>
                 </NavigationMenuItem>
             </NavigationMenuList>
         </NavigationMenu>
